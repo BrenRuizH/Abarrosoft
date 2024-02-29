@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="../assets/images/logof.png" type="image/x-icon">
+
+    <!-- font css -->
+    <link rel="stylesheet" href="../assets/fonts/font-awsome-pro/css/pro.min.css">
+    <link rel="stylesheet" href="../assets/fonts/feather.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/customizer.css">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      /* Estilos para la animación */
+      .fade-in {
+        opacity: 0;
+        animation: fadeInAnimation 0.5s ease-in-out forwards;
+      }
+    
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      /* Estilos para la posición de la ventana emergente */
+      .change-window {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+    
+      /* Estilos adicionales para el botón */
+      .btn {
+        margin-left: 10px;
+      }
+
+      .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      #invisibleHeader {
+        visibility: hidden;
+      }
+      
+    </style>
+    
+</head>
+
+<body class="">
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ Mobile header ] start -->
+    <div class="pc-mob-header pc-header">
+        <div class="pcm-toolbar">
+            <a href="#!" class="pc-head-link" id="mobile-collapse">
+                <div class="hamburger hamburger--arrowturn">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+                <!-- <i data-feather="menu"></i> -->
+            </a>
+        </div>
+    </div>
+    <!-- [ Mobile header ] End -->
+
+    <!-- [ navigation menu ] start -->
+    <nav class="pc-sidebar ">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <!-- ========   change your logo hear   ============ -->
+                <img src="../assets/images/logof.png" height="150" width="171" fill="none" class="logo logo-lg">
+                <img src="../assets/images/logof.png" height="150" width="171" fill="none" class="logo logo-sm">
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+                    <li class="pc-item pc-caption">
+                        <label>Ingresos</label>
+                    </li>
+                    <li class="pc-item">
+                        <a href="dashboard.html" class="pc-link" id="dashboard">
+                            <span class="pc-micon">
+                                <i class="fas fa-chart-line"></i>
+                            </span>
+                            <span class="pc-mtext">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-caption">
+                        <label>Movimientos</label>
+                        <span>Ventas e Inventario</span>
+                        <li>
+                            <a href="ventas.html" class="pc-link" id="ventas">
+                                <span class="pc-micon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                                <span class="pc-mtext">Ventas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detalle_venta.html" class="pc-link" id="ventas">
+                                <span class="pc-micon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                                <span class="pc-mtext">Detalles de la Venta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detalle_compra.html" class="pc-link" id="compras">
+                                <span class="pc-micon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                                <span class="pc-mtext">Detalles de la Compras</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="inventario.html" class="pc-link" id="inventario">
+                                <span class="pc-micon">
+                                    <i class="fas fa-clipboard"></i>
+                                </span>
+                                <span class="pc-mtext">Inventario</span>
+                            </a>
+                        </li>
+                    </li>
+
+                    <li class="pc-item pc-caption">
+                        <label>Reembolsos</label>
+                        <span>Clientes y Proveedorees</span>
+                        <li>
+                            <a href="rembolsoC.html" class="pc-link" id="clientes">
+                                <span class="pc-micon">
+                                    <i class="fas fa-user-minus"></i>
+                                </span>
+                                <span class="pc-mtext">Clientes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rembolsoP.html" class="pc-link" id="proveedores">
+                                <span class="pc-micon">
+                                    <i class="fas fa-parachute-box"></i>
+                                </span>
+                                <span class="pc-mtext">Proveedorees</span>
+                            </a>
+                        </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="pc-header ">
+        <div class="mr-auto  dropdown-menu-right">
+            <ul class="list-unstyled">
+                <li class="dropdown pc-h-item">
+                    <a class="pc-head-link dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <img src="../assets/images/user/avatar.jpg" alt="user-image" class="user-avtar">
+                        <span>
+                            <span id="user-name" class="user-name">Rosy Hernández</span>
+
+                            <span class="user-desc">Gerente</span>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right pc-h-dropdown">
+                        <div class=" dropdown-header">
+                            <h6 class="text-overflow m-0">Bienvenido</h6>
+                        </div>
+                        <a href="#!" class="dropdown-item ">
+                            <i data-feather="power"></i>
+                            <span>Cerrar Sesión</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container" style="display: flex; flex-direction: column;">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Ventas</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item">Productos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-scroll" style="position: relative; overflow-y: visible;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card table-card">
+                                <div class="card-header">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-sm-auto">
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <div class="input-group search-bar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="tablaVentas" class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <!-- <th id="invisibleHeader">ID</th> -->
+                                                    <th>Nombre</th>
+                                                    <th>Cantidad</th>
+                                                    <th>Precio</th>
+                                                    <th>Subtotal</th>
+                                                    <th>Acción</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="ventas-table-body">
+                                                <!-- Filas de productos agregados -->
+                                            </tbody>
+                                        </table>
+                                        <div id="terminar-container" style="text-align: center;">
+                                            
+                                            <strong>Total: $<label id="total-venta">0.00</label></strong><br><br>
+                                            <button type="button" id="btn-terminar" class="btn btn-primary">Terminar Venta</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Buscar Producto</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form id="buscar-producto-codigo-form">
+                                        <div class="form-group">
+                                            <label for="input-buscar">Buscar por Código de Barras</label>
+                                            <input type="text" class="form-control" id="input-buscar-codigo"
+                                                placeholder="Código de Barras">
+                                        </div>
+                                        <button type="button" class="btn btn-success" id="btn-agregar-codigo">Añadir</button>
+                                        <button type="button" class="btn btn-danger" id="btn-cancelar-codigo">Cancelar</button>
+                                    </form>
+                                </div>
+                                <div class="card-body">
+                                    <form id="buscar-producto-nombre-form">
+                                        <div class="form-group">
+                                            <label for="input-buscar">Buscar por Nombre</label>
+                                            <input type="text" class="form-control" id="input-buscar-nombre"
+                                                placeholder="Nombre">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <select id="select-producto" disabled class="form-control">
+                                                <option value="" disabled selected>Seleccione un producto</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <button type="button" class="btn btn-success" id="btn-agregar-nombre">Añadir</button>
+                                        <button type="button" class="btn btn-danger" id="btn-cancelar-nombre">Cancelar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+           
+            <!-- Scripts -->
+
+            <script src="../assets/js/vendor-all.min.js"></script>
+            <script src="../assets/js/plugins/bootstrap.min.js"></script>
+            <script src="../assets/js/plugins/feather.min.js"></script>
+            <script src="../assets/js/pcoded.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+            <script src="../assets/js/plugins/clipboard.min.js"></script>
+            <script src="../assets/js/uikit.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
+            <!-- Apex Chart -->
+            <script src="../assets/js/plugins/apexcharts.min.js"></script>
+
+            <!-- custom-chart js -->
+            <script src="../assets/js/pages/dashboard-sale.js"></script>
+            <script src="../assets/js/ventas.js"></script>
+</body>
+
+</html>

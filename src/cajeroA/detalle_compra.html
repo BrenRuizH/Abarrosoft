@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>AbarroSoft</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="">
+        <meta name="author" content="Phoenixcoded" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+
+        <!-- Favicon icon -->
+        <link rel="icon" href="../assets/images/logof.png" type="image/x-icon">
+
+        <!-- font css -->
+        <link rel="stylesheet" href="../assets/fonts/font-awsome-pro/css/pro.min.css">
+        <link rel="stylesheet" href="../assets/fonts/feather.css">
+        <link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+
+        <!-- vendor css -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/customizer.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+
+    <body class="">
+        <!-- [ Pre-loader ] start -->
+        <div class="loader-bg">
+            <div class="loader-track">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
+        <!-- [ Pre-loader ] End -->
+        
+        <!-- [ Mobile header ] start -->
+        <div class="pc-mob-header pc-header">
+            <div class="pcm-toolbar">
+                <a href="#!" class="pc-head-link" id="mobile-collapse">
+                    <div class="hamburger hamburger--arrowturn">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- [ Mobile header ] End -->
+
+        <!-- [ navigation menu ] start -->
+        <nav class="pc-sidebar ">
+            <div class="navbar-wrapper">
+                <div class="m-header">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="../assets/images/logof.png" height="150" width="171" fill="none" class="logo logo-lg">
+                    <img src="../assets/images/logof.png" height="150" width="171" fill="none" class="logo logo-sm">
+                </div>
+                <div class="navbar-content">
+                    <ul class="pc-navbar">
+                        <li class="pc-item pc-caption">
+                            <label>Ingresos</label>
+                        </li>
+                        <li class="pc-item">
+                            <a href="dashboard.html" class="pc-link" id="dashboard">
+                                <span class="pc-micon">
+                                    <i class="fas fa-chart-line"></i>
+                                </span>
+                                <span class="pc-mtext">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="pc-item pc-caption">
+                            <label>Movimientos</label>
+                            <span>Ventas e Inventario</span>
+                            <li>
+                                <a href="ventas.html" class="pc-link" id="ventas">
+                                    <span class="pc-micon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </span>
+                                    <span class="pc-mtext">Ventas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="detalle_venta.html" class="pc-link" id="ventas">
+                                    <span class="pc-micon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </span>
+                                    <span class="pc-mtext">Detalles de la Venta</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="detalle_compra.html" class="pc-link" id="compras">
+                                    <span class="pc-micon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </span>
+                                    <span class="pc-mtext">Detalles de la Compras</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="inventario.html" class="pc-link" id="inventario">
+                                    <span class="pc-micon">
+                                        <i class="fas fa-clipboard"></i>
+                                    </span>
+                                    <span class="pc-mtext">Inventario</span>
+                                </a>
+                            </li>
+                            <li class="pc-item pc-caption">
+                                <label>Reembolsos</label>
+                                <span>Clientes y Proveedorees</span>
+                                <li>
+                                    <a href="rembolsoC.html" class="pc-link" id="clientes">
+                                        <span class="pc-micon">
+                                            <i class="fas fa-user-minus"></i>
+                                        </span>
+                                        <span class="pc-mtext">Clientes</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rembolsoP.html" class="pc-link" id="proveedores">
+                                        <span class="pc-micon">
+                                            <i class="fas fa-parachute-box"></i>
+                                        </span>
+                                        <span class="pc-mtext">Proveedorees</span>
+                                    </a>
+                                </li>
+                            </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- [ navigation menu ] end -->
+
+        <!-- [ Header ] start -->
+        <header class="pc-header ">
+            <div class="mr-auto  dropdown-menu-right">
+                <ul class="list-unstyled">
+                    <li class="dropdown pc-h-item">
+                        <a class="pc-head-link dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="../assets/images/user/avatar.jpg" alt="user-image" class="user-avtar">
+                            <span>
+                                <span class="user-name">Alan Hernández</span>
+                                <span class="user-desc">Vendedor</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right pc-h-dropdown">
+                            <div class=" dropdown-header">
+                                <h6 class="text-overflow m-0">Bienvenido</h6>
+                            </div>
+                            <a href="#!" class="dropdown-item ">
+                                <i data-feather="power"></i>
+                                <span>Cerrar Sesión</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- [ Header ] end -->
+
+        <!-- [ Main Content ] start -->
+        <div class="pc-container">
+            <div class="pcoded-content">
+
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h5 class="m-b-10">Compras</h5>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item">Detalles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+            
+                <!-- [ Main Content ] start -->
+                <div class="row" style="margin-bottom: 10px;">
+                    <div style="display: flex; align-items: center;">
+                      <label for="select-temporalidad" style="margin-right: 10px; font-weight: bold;">Temporalidad:</label>
+                      <select id="select-temporalidad" style="margin-right: 10px; padding: 5px;">
+                        <option value="">Selecciona una temporalidad</option>
+                        <option value="hoy">Hoy</option>
+                        <option value="semana">Esta semana</option>
+                        <option value="mes">Este mes</option>
+                        <option value="mes-anterior">Mes anterior</option>
+                        <option value="primera-quincena">Esta 1ra quincena</option>
+                        <option value="segunda-quincena">Esta 2da quincena</option>
+                        <option value="personalizado">Personalizado</option>
+                      </select>
+                      <label for="input-fecha-inicio" style="margin-right: 10px; font-weight: bold;">Fecha inicio:</label>
+                      <input type="date" id="input-fecha-inicio" disabled style="margin-right: 10px; padding: 5px;">
+                      <label for="input-fecha-fin" style="margin-right: 10px; font-weight: bold;">Fecha fin:</label>
+                      <input type="date" id="input-fecha-fin" disabled style="margin-right: 10px; padding: 5px;">
+                      <button id="btn-generar" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;">Generar</button>
+                    </div>
+                  </div>
+                  
+                  
+                  
+    
+                    <div class="row">
+                    <!-- customer-section start -->
+                    <div class="col-xl-12 col-md-12">
+                        <div class="card table-card">
+                            <div class="card-header">
+
+                                <div class="row justify-content-between align-items-center">
+                                    <h4 class="m-b-0" style="margin: 0 auto;"><strong><label id="total-compras" class="m-b-0"></label></strong></h4>
+                                </div>
+                                
+                                
+
+                            </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table id="tabla-compras" class="table table-hover m-b-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>VENDEDOR</th>
+                                                    <th>FECHA</th>
+                                                    <th>HORA</th>
+                                                    <th>PRODUCTO</th>
+                                                    <th>PRECIO</th>
+                                                    <th>CANTIDAD</th>
+                                                    <th>SUBTOTAL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    
+    <!-- [ Main Content ] end -->
+
+    <!-- Required Js -->
+    <script src="../assets/js/vendor-all.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/feather.min.js"></script>
+    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="../assets/js/plugins/clipboard.min.js"></script>
+    <script src="../assets/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
+    <!-- Apex Chart -->
+    <script src="../assets/js/plugins/apexcharts.min.js"></script>
+
+    <!-- custom-chart js -->
+    <script src="../assets/js/pages/dashboard-sale.js"></script>
+    <script src="../assets/js/detalle_compra.js"></script>
+
+    <script src="../main.js"></script>
+    
+</body>

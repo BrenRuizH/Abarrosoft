@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+    <link rel="icon" href="../assets/images/logof.png" type="image/x-icon">
+
+    <!-- font css -->
+    <link rel="stylesheet" href="../assets/fonts/font-awsome-pro/css/pro.min.css">
+    <link rel="stylesheet" href="../assets/fonts/feather.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/customizer.css">
+    <title>Agregar Cantidad</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Agregar Cantidad</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="agregar-cantidad-form">
+                            <div class="form-group">
+                                <input type="hidden" id="producto-id-input" value="">
+                                <label for="cantidad-input">Cantidad</label>
+                                <input type="text" class="form-control" id="cantidad-input" placeholder="Piezas">
+                            </div>
+                            <button type="submit" class="btn btn-success">Agregar</button>
+                            <button type= "button" id="cancelar-button" class="btn btn-danger">Cancelar</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/vendor-all.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/feather.min.js"></script>
+    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="../assets/js/plugins/clipboard.min.js"></script>
+    <script src="../assets/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
+    <!-- Apex Chart -->
+    <script src="../assets/js/plugins/apexcharts.min.js"></script>
+
+    <!-- custom-chart js -->
+    <script src="../assets/js/pages/dashboard-sale.js"></script>
+    <script src="../assets/js/agregar_cantidad.js"></script>
+</body>
+
+</html>
